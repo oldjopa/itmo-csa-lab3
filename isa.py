@@ -12,27 +12,28 @@ class AddressingType(int, Enum):
 
 
 class Opcode(str, Enum):
-    '''Команды'''
-    DEC = 'dec'
-    INC = 'inc'
-    IN = 'in'
-    OUT = 'out'
-    CLA = 'cla'
-    HLT = 'hlt'
-    ST = 'st'
-    LD = 'ld'
-    ADD = 'add'
-    SUB = 'sub'
-    DIV = 'div'
-    MUL = 'mul'
-    CMP = 'cmp'
-    JMP = 'jmp'
-    BZ = 'bz'
-    BNZ = 'bnz'
-    BNN = 'bnn'
-    BN = 'bn'
-    AND = 'and'
-    OR = 'or'
+    """Команды"""
+
+    DEC = "dec"
+    INC = "inc"
+    IN = "in"
+    OUT = "out"
+    CLA = "cla"
+    HLT = "hlt"
+    ST = "st"
+    LD = "ld"
+    ADD = "add"
+    SUB = "sub"
+    DIV = "div"
+    MUL = "mul"
+    CMP = "cmp"
+    JMP = "jmp"
+    BZ = "bz"
+    BNZ = "bnz"
+    BNN = "bnn"
+    BN = "bn"
+    AND = "and"
+    OR = "or"
 
 
 control_commands = [Opcode.BZ, Opcode.BNZ, Opcode.BN, Opcode.JMP, Opcode.BNN]

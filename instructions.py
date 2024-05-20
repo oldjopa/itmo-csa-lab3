@@ -2,7 +2,7 @@ from address_manager import AddressManager, Instruction
 
 from isa import Opcode, AddressingType
 
-'''
+"""
 ---no addr---
 cla
 inc
@@ -24,7 +24,7 @@ bnz
 bn
 bnn
 jmp
-'''
+"""
 
 
 def translate_req_order(address_manager, args, op):
@@ -308,7 +308,12 @@ def call_function(address_manager: AddressManager, args):
 
 
 default_func = ["address_manager.add_instruction", "input"]
-math = ["+", "-", "*", "/", ]
+math = [
+    "+",
+    "-",
+    "*",
+    "/",
+]
 logic = ["and", "or"]
 comparators = ["=", ">=", ">", "<", "<="]
 operators = ["var", "set", "defun", "loop"]
@@ -317,17 +322,17 @@ loop = ["for", "in", "from", "do"]
 const = ["T", "Nil"]
 
 instructions_mapping = {
-    '+': add,
-    '-': sub,
-    '*': mul,
-    '/': div,
-    'if': cond_if,
-    'while': loop_while,
-    'var': create_var,
-    'set': set_var,
-    'printc': fun_print,
-    'print_string': fun_print_string,
-    'input': fun_input,
+    "+": add,
+    "-": sub,
+    "*": mul,
+    "/": div,
+    "if": cond_if,
+    "while": loop_while,
+    "var": create_var,
+    "set": set_var,
+    "printc": fun_print,
+    "print_string": fun_print_string,
+    "input": fun_input,
     "read_line": fun_readline,
     "=": compare_eq,
     "!=": compare_not_eq,

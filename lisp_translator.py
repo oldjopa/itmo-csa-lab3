@@ -1,4 +1,4 @@
-'''
+"""
 s_expression ::= atomic_symbol | "(" s_expression "." s_expression ")"
 atomic_symbol ::= letter atom_part
 atom_part ::= empty | letter atom_part | number atom_part
@@ -6,7 +6,7 @@ letter ::= "a" | "b" | " ..." | "z"
 number ::= "1" | "2" | " ..." | "9"
 empty ::= " "
 newline ::= "\\n"
-'''
+"""
 
 import sys
 from instructions import *
@@ -15,19 +15,20 @@ from address_manager import AddressManager
 
 # lisp -> asm | acc | harv | hw | tick -> instr | struct | stream | port | pstr | prob2 | cache
 
+
 def tokenize(content: str):
-    token = ''
+    token = ""
     skip_space = False
     for ch in content:
         if ch == " " and not skip_space:
             if len(token) > 0:
                 yield token
-                token = ''
+                token = ""
             continue
         elif ch in "()":
             if len(token) > 0:
                 yield token
-                token = ''
+                token = ""
             yield ch
             continue
         else:
@@ -60,7 +61,7 @@ def parse(content: str):
 
 
 def translate(in_filename, out_filename):
-    with open(in_filename, 'r') as code:
+    with open(in_filename, "r") as code:
         text = code.read().replace("\n", "")
         operations = parse(text)
         # print(operations)
@@ -76,6 +77,6 @@ def main(in_filename, out_filename):
     translate(in_filename, out_filename)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     assert len(sys.argv) == 3, "Wrong arguments: machine.py <code_file> <input_file>"
     main(sys.argv[1], sys.argv[2])

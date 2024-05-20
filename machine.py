@@ -5,8 +5,8 @@ from typing import List
 
 from isa import Opcode, read_code, AddressingType, control_commands
 
-ACC_MAX_VALUE = 2 ** 31 - 1
-ACC_MIN_VALUE = -2 ** 31 + 1
+ACC_MAX_VALUE = 2**31 - 1
+ACC_MIN_VALUE = -(2**31) + 1
 
 
 class DataPath:
@@ -76,9 +76,9 @@ class DataPath:
 
     def set_acc(self, value: int):
         if value > ACC_MAX_VALUE:
-            self.acc = int(str(bin(self.acc))[len(str(bin(self.acc))) - 32:], 2)
+            self.acc = int(str(bin(self.acc))[len(str(bin(self.acc))) - 32 :], 2)
         elif value < ACC_MIN_VALUE:
-            self.acc = int(str(bin(self.acc))[len(str(bin(self.acc))) - 32:], 2)
+            self.acc = int(str(bin(self.acc))[len(str(bin(self.acc))) - 32 :], 2)
         else:
             self.acc = value
 
