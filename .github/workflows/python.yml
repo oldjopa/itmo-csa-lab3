@@ -4,19 +4,12 @@ on:
   push:
     branches:
       - main
-    paths:
-      - ".github/workflows/*"
-      - "python/**"
   pull_request:
     branches:
       - main
-    paths:
-      - ".github/workflows/*"
-      - "python/**"
 
-defaults:
-  run:
-    working-directory: ./python
+permissions:
+  contents: read
 
 jobs:
   test:
@@ -36,7 +29,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install poetry
           poetry install
-
       - name: Run tests and collect coverage
         run: |
           poetry run coverage run -m pytest .
@@ -61,7 +53,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install poetry
           poetry install
-
       - name: Check code formatting with Ruff
         run: poetry run ruff format --check .
 

@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "csa"
 version = "0.1.1"
-description = "An example project for Computer System Architecture class."
+description = "CSA lab 3"
 authors = ["Leonid Yankovoi <lyona255288ru@gmail.com>"]
 license = "MIT"
 readme = "README.md"
