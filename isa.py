@@ -35,7 +35,6 @@ class Opcode(str, Enum):
     OR = 'or'
 
 
-
 control_commands = [Opcode.BZ, Opcode.BNZ, Opcode.BN, Opcode.JMP, Opcode.BNN]
 
 

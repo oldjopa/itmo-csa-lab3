@@ -101,9 +101,10 @@ def cond_if(address_manager: AddressManager, args):
         address_manager.add_instruction(Opcode.JMP)
         if_pointer2 = address_manager.get_instruction_pointer()
         translate_level(args[2], address_manager)
-        address_manager.set_arg(if_pointer2, address_manager.get_instruction_pointer()+1)
+        address_manager.set_arg(if_pointer2, address_manager.get_instruction_pointer() + 1)
     else:
         address_manager.set_arg(if_pointer, address_manager.get_instruction_pointer() + 1)
+
 
 def loop_while(address_manager: AddressManager, args):
     # print(args)
@@ -134,14 +135,14 @@ def fun_input(address_manager: AddressManager, args):
 
 
 def fun_readline(address_manager: AddressManager, args):
-    pointer = address_manager.get_address_for(args[0]+1)
+    pointer = address_manager.get_address_for(args[0] + 1)
     counter = address_manager.allocate_static_memory(0)
     newline = address_manager.allocate_static_memory(ord("\n"))
     address_manager.add_instruction(Opcode.IN)
     branch_pointer = address_manager.get_instruction_pointer()
     address_manager.add_instruction(Opcode.ST, pointer, AddressingType.INDIRECT)
     address_manager.add_instruction(Opcode.CMP, newline)
-    address_manager.add_instruction(Opcode.BZ, address_manager.get_instruction_pointer()+9)
+    address_manager.add_instruction(Opcode.BZ, address_manager.get_instruction_pointer() + 9)
     address_manager.add_instruction(Opcode.LD, pointer)
     address_manager.add_instruction(Opcode.INC)
     address_manager.add_instruction(Opcode.ST, pointer)

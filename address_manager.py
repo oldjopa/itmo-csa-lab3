@@ -49,7 +49,7 @@ class AddressManager:
     def add_variable(self, varlabel, value):
         if type(value) == str:
             if '[' in value:
-                length = int(value[value.index('[')+1: -1])
+                length = int(value[value.index('[') + 1: -1])
                 self.variables[varlabel] = self._allocate_new_mem(length, length)
             else:
                 self.variables[varlabel] = self.allocate_static_string(value)
@@ -118,7 +118,7 @@ class AddressManager:
 
     def allocate_static_string(self, string: str):
         string = string.replace("\\\\n", '\n')
-        pointer = self._allocate_new_mem(ONE_WORD, len(string)-2)
+        pointer = self._allocate_new_mem(ONE_WORD, len(string) - 2)
         for c in string[1:-1]:
             self._allocate_new_mem(ONE_WORD, ord(c))
         print(pointer, string)
