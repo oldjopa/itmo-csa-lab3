@@ -117,7 +117,7 @@ class AddressManager:
         pointer = self._allocate_new_mem(ONE_WORD, len(string) - 2)
         for c in string[1:-1]:
             self._allocate_new_mem(ONE_WORD, ord(c))
-        print(pointer, string)
+        # print(pointer, string)
         return pointer
 
     def allocate_array(self, length):
