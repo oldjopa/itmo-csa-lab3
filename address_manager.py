@@ -46,7 +46,7 @@ class AddressManager:
     def add_variable(self, varlabel, value):
         if isinstance(value, str):
             if "[" in value:
-                length = int(value[value.index("[") + 1: -1])
+                length = int(value[value.index("[") + 1 : -1])
                 self.variables[varlabel] = self._allocate_new_mem(length, length)
             else:
                 self.variables[varlabel] = self.allocate_static_string(value)

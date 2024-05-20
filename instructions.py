@@ -227,9 +227,11 @@ def translate_level(operations, address_manager):
     if isinstance(operations[0], list):  # скобка с чисто выражениями
         for op in operations:
             translate_level(op, address_manager)
+        return None
     if len(operations) == 1:
         try:
             address_manager.add_instruction(Opcode.LD, address_manager.get_address_for(operations[0]))
+            return None
         except Exception:
             print("no such variable: " + operations[0])
     operation = operations[0]
