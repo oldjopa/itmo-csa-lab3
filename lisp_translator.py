@@ -9,9 +9,8 @@ newline ::= "\\n"
 """
 
 import sys
-from instructions import *
-from address_manager import AddressManager
 
+from instructions import AddressManager, Opcode, translate_level
 
 # lisp -> asm | acc | harv | hw | tick -> instr | struct | stream | port | pstr | prob2 | cache
 
@@ -61,7 +60,7 @@ def parse(content: str):
 
 
 def translate(in_filename, out_filename):
-    with open(in_filename, "r") as code:
+    with open(in_filename) as code:
         text = code.read().replace("\n", "")
         operations = parse(text)
         # print(operations)

@@ -1,9 +1,9 @@
+from __future__ import annotations
+
 import logging
 import sys
 
-from typing import List
-
-from isa import Opcode, read_code, AddressingType, control_commands
+from isa import AddressingType, Opcode, control_commands, read_code
 
 ACC_MAX_VALUE = 2**31 - 1
 ACC_MIN_VALUE = -(2**31) + 1
@@ -17,7 +17,7 @@ class DataPath:
     input_buffer = None
     output_buffer = None
 
-    def __init__(self, data_memory_size: int, input_buffer: List[str], memory_dict: dict):
+    def __init__(self, data_memory_size: int, input_buffer: list[str], memory_dict: dict):
         assert data_memory_size > 0, "Data_memory size should be non-zero"
         self.data_memory_size = data_memory_size
         self.data_memory = [0] * data_memory_size

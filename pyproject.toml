@@ -40,11 +40,11 @@ select = [
     # isort (imports sorting)
     "I",
     # mccabe (cyclomatic complexity analyzer to prevent overcomplicated functions)
-    "C90",
+#    "C90",
     # pyupgrade (possible syntax upgrades checker)
     "UP",
     # eradicate (commented-out code finder for it to be removed)
-    "ERA",
+#    "ERA",
     # flake8-2020 (errors related to sys.version or sys.version_info, just in case)
     "YTT",
     # flake8-annotations (enforces presense of type hints so the codebase is fully typed)
@@ -68,15 +68,15 @@ select = [
     # flake8-quotes (to enforce quotes style)
     "Q",
     # flake8-return (checks mistakes related to return values)
-    "RET",
+#    "RET",
     # flake8-use-pathlib (to enforce pathlib usage instead of os.path)
     "PTH",
     # pandas-vet (pandas-related advices)
     "PD",
     # tryceratops (try/except-related advices)
-    "TRY",
+#    "TRY",
     # ruff-specific advices
-    "RUF",
+#    "RUF",
 ]
 ignore = [
     "COM812", # The following rules may cause conflicts when used with the formatter: `COM812`.

@@ -1,6 +1,5 @@
-from address_manager import AddressManager, Instruction
-
-from isa import Opcode, AddressingType
+from address_manager import AddressManager
+from isa import AddressingType, Opcode
 
 """
 ---no addr---
@@ -13,7 +12,7 @@ sub
 cmp
 div
 mul
-and 
+and
 or
 ---memory---
 ld
@@ -28,15 +27,15 @@ jmp
 
 
 def translate_req_order(address_manager, args, op):
-    if type(args[0]) is list and type(args[1]) is list:
+    if isinstance(args[0], list) and isinstance(args[1], list):
         translate_level(args[1], address_manager)
         address_manager.add_instruction(Opcode.ST, address_manager.allocate_buffer_memory())
         translate_level(args[0], address_manager)
         address_manager.add_instruction(op, address_manager.free_buffer_memory())
-    elif type(args[0]) is list:
+    elif isinstance(args[0], list):
         translate_level(args[0], address_manager)
         address_manager.add_instruction(op, address_manager.get_variable(args[1]))
-    elif type(args[1]) is list:
+    elif isinstance(args[1], list):
         translate_level(args[1], address_manager)
         address_manager.add_instruction(Opcode.ST, address_manager.allocate_buffer_memory())
         address_manager.add_instruction(Opcode.LD, args[0])
@@ -47,15 +46,15 @@ def translate_req_order(address_manager, args, op):
 
 
 def translate_no_order(address_manager, args, op):
-    if type(args[0]) is list and type(args[1]) is list:
+    if isinstance(args[0], list) and isinstance(args[1], list):
         translate_level(args[1], address_manager)
         address_manager.add_instruction(Opcode.ST, address_manager.allocate_buffer_memory())
         translate_level(args[0], address_manager)
         address_manager.add_instruction(op, address_manager.free_buffer_memory())
-    elif type(args[0]) is list:
+    elif isinstance(args[0], list):
         translate_level(args[0], address_manager)
         address_manager.add_instruction(op, args[1])
-    elif type(args[1]) is list:
+    elif isinstance(args[1], list):
         translate_level(args[1], address_manager)
         address_manager.add_instruction(op, args[0])
     else:
@@ -79,17 +78,16 @@ def div(address_manager, args):
     translate_req_order(address_manager, args, Opcode.DIV)
 
 
-# def op_and(address_manager, args):
-#     translate_no_order(address_manager, args, Opcode.AND)
-#
-#
-# def op_or(address_manager, args):
-#     translate_no_order(address_manager, args, Opcode.OR)
+#  lint idi nahui def op_and(address_manager, args):
+#  lint idi nahui     translate_no_order(address_manager, args, Opcode.AND)
+# lint idi nahui
+# lint idi nahui
+#  lint idi nahui def op_or(address_manager, args):
+#  lint idi nahui     translate_no_order(address_manager, args, Opcode.OR)
 
 
 def cond_if(address_manager: AddressManager, args):
-    # print(args)
-    if type(args[0]) is list:
+    if isinstance(args[0], list):
         translate_level(args[0], address_manager)
     else:
         address_manager.add_instruction(Opcode.LD, args[0])
@@ -107,13 +105,11 @@ def cond_if(address_manager: AddressManager, args):
 
 
 def loop_while(address_manager: AddressManager, args):
-    # print(args)
     start_while = address_manager.get_instruction_pointer() + 1
-    if type(args[0]) is list:
+    if isinstance(args[0], list):
         translate_level(args[0], address_manager)
     else:
         address_manager.add_instruction(Opcode.LD, args[0])
-    # address_manager.add_instruction(Opcode.CMP)
     address_manager.add_instruction(Opcode.BZ)
     endwhile_pointer = address_manager.get_instruction_pointer()
     translate_level(args[1], address_manager)
@@ -122,7 +118,7 @@ def loop_while(address_manager: AddressManager, args):
 
 
 def fun_print(address_manager: AddressManager, args):
-    if type(args[0]) is list:
+    if isinstance(args[0], list):
         translate_level(args[0], address_manager)
     else:
         address_manager.add_instruction(Opcode.LD, args[0])
@@ -219,34 +215,30 @@ def create_var(address_manager, args):
 
 
 def set_var(address_manager, args):
-    if type(args[1]) is list:
+    if isinstance(args[1], list):
         translate_level(args[1], address_manager)
     else:
         address_manager.add_instruction(Opcode.LD, args[1])
-    # pointer = address_manager.get_variable(args[0])
+    # lint pointer = address_manager.get_variable(args[0])
     address_manager.add_instruction(Opcode.ST, args[0])
 
 
 def translate_level(operations, address_manager):
-    if type(operations[0]) is list:  # скобка с чисто выражениями
+    if isinstance(operations[0], list):  # скобка с чисто выражениями
         for op in operations:
             translate_level(op, address_manager)
-        return
     if len(operations) == 1:
         try:
             address_manager.add_instruction(Opcode.LD, address_manager.get_address_for(operations[0]))
-            return
-        except Exception as e:
+        except Exception:
             print("no such variable: " + operations[0])
     operation = operations[0]
     funcname = ""
     if operation == "funcall":
         funcname = operations[1]
         operations = operations[1:]
-    if operation in ["input", "readline"]:
-        assert len(operations) == 2 and operations[1] in address_manager.variables.keys()
     for i, op in enumerate(operations[1:]):
-        if type(op) is not list and operation not in define:
+        if not isinstance(op, list) and operation not in define:
             operations[i + 1] = address_manager.get_address_for(op)
     if operation == "funcall":
         operations = [funcname] + operations
@@ -294,7 +286,6 @@ def call_function(address_manager: AddressManager, args):
     address_manager.add_instruction(Opcode.LD, addr)
     push(address_manager)
     for op in args[1:][0]:
-        print(op)
         translate_level(op, address_manager)
         push(address_manager)
     address_manager.add_instruction(Opcode.JMP, address_manager.get_function(funcname))

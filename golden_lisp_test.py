@@ -4,9 +4,9 @@ import logging
 import os
 import tempfile
 
+import lisp_translator
 import machine
 import pytest
-import lisp_translator
 
 
 @pytest.mark.golden_test("golden/*_lisp.yml")

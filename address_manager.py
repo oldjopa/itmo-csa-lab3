@@ -1,5 +1,3 @@
-from typing import List
-
 import code_packer
 from isa import AddressingType
 
@@ -30,8 +28,7 @@ class AddressManager:
         self.variables = dict()
         self.address_pointer = instruction_pointer
         self.buffer_pointer = buffer_pointer
-        # self.instruction_pointer = 0x0
-        self.instructions: List[Instruction] = []
+        self.instructions = []
         self.stack_pointer = 256
         self.memory[self.stack_pointer] = self.stack_pointer
         self.swap_pop = self.stack_pointer - 1
@@ -47,9 +44,9 @@ class AddressManager:
         return self._allocate_new_mem(ONE_WORD, value)
 
     def add_variable(self, varlabel, value):
-        if type(value) == str:
+        if isinstance(value, str):
             if "[" in value:
-                length = int(value[value.index("[") + 1 : -1])
+                length = int(value[value.index("[") + 1: -1])
                 self.variables[varlabel] = self._allocate_new_mem(length, length)
             else:
                 self.variables[varlabel] = self.allocate_static_string(value)
@@ -78,7 +75,6 @@ class AddressManager:
 
     def add_instruction(self, instruction, arg="", addressing=AddressingType.DIRECT):
         self.instructions.append(Instruction(instruction, arg, self.get_instruction_pointer() + 1, addressing))
-        # print(str(self.get_instruction_pointer()), " : ", str(instruction))
 
     def get_instruction_pointer(self):
         return len(self.instructions) - 1
@@ -95,7 +91,7 @@ class AddressManager:
         code_packer.write_instructions_to_file(self.instructions, self.memory, filename)
 
     def get_address_for(self, token):
-        if type(token) is not list:
+        if not isinstance(token, list):
             if token in self.variables.keys():
                 return self.variables[token]
         try:
