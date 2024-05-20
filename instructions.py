@@ -79,12 +79,12 @@ def div(address_manager, args):
     translate_req_order(address_manager, args, Opcode.DIV)
 
 
-def op_and(address_manager, args):
-    translate_no_order(address_manager, args, Opcode.AND)
-
-
-def op_or(address_manager, args):
-    translate_no_order(address_manager, args, Opcode.OR)
+# def op_and(address_manager, args):
+#     translate_no_order(address_manager, args, Opcode.AND)
+#
+#
+# def op_or(address_manager, args):
+#     translate_no_order(address_manager, args, Opcode.OR)
 
 
 def cond_if(address_manager: AddressManager, args):
@@ -96,8 +96,14 @@ def cond_if(address_manager: AddressManager, args):
     address_manager.add_instruction(Opcode.BZ)
     if_pointer = address_manager.get_instruction_pointer()
     translate_level(args[1], address_manager)
-    address_manager.set_arg(if_pointer, address_manager.get_instruction_pointer() + 1)
-
+    if len(args) > 2:
+        address_manager.set_arg(if_pointer, address_manager.get_instruction_pointer() + 2)
+        address_manager.add_instruction(Opcode.JMP)
+        if_pointer2 = address_manager.get_instruction_pointer()
+        translate_level(args[2], address_manager)
+        address_manager.set_arg(if_pointer2, address_manager.get_instruction_pointer()+1)
+    else:
+        address_manager.set_arg(if_pointer, address_manager.get_instruction_pointer() + 1)
 
 def loop_while(address_manager: AddressManager, args):
     # print(args)
@@ -115,8 +121,10 @@ def loop_while(address_manager: AddressManager, args):
 
 
 def fun_print(address_manager: AddressManager, args):
-    assert args[0] not in address_manager.variables.keys()
-    address_manager.add_instruction(Opcode.LD, args[0])
+    if type(args[0]) is list:
+        translate_level(args[0], address_manager)
+    else:
+        address_manager.add_instruction(Opcode.LD, args[0])
     address_manager.add_instruction(Opcode.OUT)
 
 
@@ -147,7 +155,6 @@ def fun_readline(address_manager: AddressManager, args):
 
 
 def fun_print_string(address_manager: AddressManager, args):
-    print(address_manager.variables)
     string_pointer = address_manager.get_address_for(args[0])
     out_counter = address_manager.allocate_buffer_memory()
     address_manager.add_instruction(Opcode.LD, args[0])
@@ -220,7 +227,6 @@ def set_var(address_manager, args):
 
 
 def translate_level(operations, address_manager):
-    print(operations)
     if type(operations[0]) is list:  # скобка с чисто выражениями
         for op in operations:
             translate_level(op, address_manager)
@@ -326,8 +332,8 @@ instructions_mapping = {
     "!=": compare_not_eq,
     ">": compare_more,
     "<": compare_less,
-    "and": op_and,
-    "or": op_or,
+    # "and": op_and,
+    # "or": op_or,
     "defunc": define_function,
     "funcall": call_function,
     # "<=": compare_less_eq,

@@ -1,4 +1,2 @@
-(var x 10)
-(var y 20)
-(set x (+ x y))
-(printc x)
+(var a 9)
+(if (> a 10) (print_string "a") (print_string "b"))

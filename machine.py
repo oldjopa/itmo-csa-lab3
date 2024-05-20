@@ -135,7 +135,7 @@ class ControlUnit:
 
     def decode_and_execute_instruction(self):
         logging.info("instruction: %s", self.instruction_memory[self.program_counter])
-        logging.info(self.data_path.data_memory)
+        # logging.info(self.data_path.data_memory)
         self.instruction_fetch_cycle()
         opcode = self.instruction["opcode"]
 

@@ -1,0 +1,128 @@
+in_source: |-
+  (var x 0)
+  (while (input x)
+    (printc x)
+  )
+in_stdin: |-
+  foo
+out_code: |-
+  [{"256": 256, "0": 0}, {"opcode": "in", "arg": "", "addressingType": 0}, {"opcode": "st", "arg": 0, "addressingType": 0}, {"opcode": "bz", "arg": 6, "addressingType": 0}, {"opcode": "ld", "arg": 0, "addressingType": 0}, {"opcode": "out", "arg": "", "addressingType": 0}, {"opcode": "jmp", "arg": 0, "addressingType": 0}, {"opcode": "hlt", "arg": "", "addressingType": 0}]
+out_stdout: |
+  loaded 0 into 0
+  {256: 256, 0: 0}
+  0  :  in 
+  1  :  st 0
+  2  :  bz 6
+  3  :  ld 0
+  4  :  out 
+  5  :  jmp 0
+  6  :  hlt 
+  ============================================================
+  foo
+  instr_counter:  21 ticks: 74
+out_log: |
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'in', 'arg': '', 'addressingType': 0}
+  INFO    machine:tick          TICK:   1 PC:   0 ADDR:   0 MEM_OUT: 0 DATA_REG 0 ACC: 0 	in 
+  INFO    machine:tick          TICK:   2 PC:   0 ADDR:   0 MEM_OUT: 0 DATA_REG 0 ACC: 102 	in 
+  INFO    machine:tick          TICK:   3 PC:   1 ADDR:   0 MEM_OUT: 0 DATA_REG 0 ACC: 102 	st 0
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'st', 'arg': 0, 'addressingType': 0}
+  INFO    machine:tick          TICK:   4 PC:   1 ADDR:   0 MEM_OUT: 0 DATA_REG 0 ACC: 102 	st 0
+  INFO    machine:tick          TICK:   5 PC:   1 ADDR:   0 MEM_OUT: 0 DATA_REG 0 ACC: 102 	st 0
+  DEBUG   machine:latch_memory  latch_memory: 0 : 102
+  INFO    machine:tick          TICK:   6 PC:   1 ADDR:   0 MEM_OUT: 102 DATA_REG 0 ACC: 102 	st 0
+  INFO    machine:tick          TICK:   7 PC:   2 ADDR:   0 MEM_OUT: 102 DATA_REG 0 ACC: 102 	bz 6
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'bz', 'arg': 6, 'addressingType': 0}
+  INFO    machine:tick          TICK:   8 PC:   2 ADDR:   0 MEM_OUT: 102 DATA_REG 0 ACC: 102 	bz 6
+  INFO    machine:tick          TICK:   9 PC:   2 ADDR:   0 MEM_OUT: 102 DATA_REG 0 ACC: 102 	bz 6
+  INFO    machine:tick          TICK:  10 PC:   3 ADDR:   0 MEM_OUT: 102 DATA_REG 0 ACC: 102 	ld 0
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'ld', 'arg': 0, 'addressingType': 0}
+  INFO    machine:tick          TICK:  11 PC:   3 ADDR:   0 MEM_OUT: 102 DATA_REG 0 ACC: 102 	ld 0
+  INFO    machine:tick          TICK:  12 PC:   3 ADDR:   0 MEM_OUT: 102 DATA_REG 0 ACC: 102 	ld 0
+  INFO    machine:tick          TICK:  13 PC:   3 ADDR:   0 MEM_OUT: 102 DATA_REG 102 ACC: 102 	ld 0
+  INFO    machine:tick          TICK:  14 PC:   3 ADDR:   0 MEM_OUT: 102 DATA_REG 102 ACC: 102 	ld 0
+  INFO    machine:tick          TICK:  15 PC:   4 ADDR:   0 MEM_OUT: 102 DATA_REG 102 ACC: 102 	out 
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'out', 'arg': '', 'addressingType': 0}
+  INFO    machine:tick          TICK:  16 PC:   4 ADDR:   0 MEM_OUT: 102 DATA_REG 102 ACC: 102 	out 
+  DEBUG   machine:signal_output output:  << f
+  INFO    machine:tick          TICK:  17 PC:   4 ADDR:   0 MEM_OUT: 102 DATA_REG 102 ACC: 102 	out 
+  INFO    machine:tick          TICK:  18 PC:   5 ADDR:   0 MEM_OUT: 102 DATA_REG 102 ACC: 102 	jmp 0
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'jmp', 'arg': 0, 'addressingType': 0}
+  INFO    machine:tick          TICK:  19 PC:   5 ADDR:   0 MEM_OUT: 102 DATA_REG 102 ACC: 102 	jmp 0
+  INFO    machine:tick          TICK:  20 PC:   5 ADDR:   0 MEM_OUT: 102 DATA_REG 102 ACC: 102 	jmp 0
+  INFO    machine:tick          TICK:  21 PC:   0 ADDR:   0 MEM_OUT: 102 DATA_REG 102 ACC: 102 	in 
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'in', 'arg': '', 'addressingType': 0}
+  INFO    machine:tick          TICK:  22 PC:   0 ADDR:   0 MEM_OUT: 102 DATA_REG 102 ACC: 102 	in 
+  INFO    machine:tick          TICK:  23 PC:   0 ADDR:   0 MEM_OUT: 102 DATA_REG 102 ACC: 111 	in 
+  INFO    machine:tick          TICK:  24 PC:   1 ADDR:   0 MEM_OUT: 102 DATA_REG 102 ACC: 111 	st 0
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'st', 'arg': 0, 'addressingType': 0}
+  INFO    machine:tick          TICK:  25 PC:   1 ADDR:   0 MEM_OUT: 102 DATA_REG 102 ACC: 111 	st 0
+  INFO    machine:tick          TICK:  26 PC:   1 ADDR:   0 MEM_OUT: 102 DATA_REG 102 ACC: 111 	st 0
+  DEBUG   machine:latch_memory  latch_memory: 0 : 111
+  INFO    machine:tick          TICK:  27 PC:   1 ADDR:   0 MEM_OUT: 111 DATA_REG 102 ACC: 111 	st 0
+  INFO    machine:tick          TICK:  28 PC:   2 ADDR:   0 MEM_OUT: 111 DATA_REG 102 ACC: 111 	bz 6
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'bz', 'arg': 6, 'addressingType': 0}
+  INFO    machine:tick          TICK:  29 PC:   2 ADDR:   0 MEM_OUT: 111 DATA_REG 102 ACC: 111 	bz 6
+  INFO    machine:tick          TICK:  30 PC:   2 ADDR:   0 MEM_OUT: 111 DATA_REG 102 ACC: 111 	bz 6
+  INFO    machine:tick          TICK:  31 PC:   3 ADDR:   0 MEM_OUT: 111 DATA_REG 102 ACC: 111 	ld 0
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'ld', 'arg': 0, 'addressingType': 0}
+  INFO    machine:tick          TICK:  32 PC:   3 ADDR:   0 MEM_OUT: 111 DATA_REG 102 ACC: 111 	ld 0
+  INFO    machine:tick          TICK:  33 PC:   3 ADDR:   0 MEM_OUT: 111 DATA_REG 102 ACC: 111 	ld 0
+  INFO    machine:tick          TICK:  34 PC:   3 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	ld 0
+  INFO    machine:tick          TICK:  35 PC:   3 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	ld 0
+  INFO    machine:tick          TICK:  36 PC:   4 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	out 
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'out', 'arg': '', 'addressingType': 0}
+  INFO    machine:tick          TICK:  37 PC:   4 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	out 
+  DEBUG   machine:signal_output output: f << o
+  INFO    machine:tick          TICK:  38 PC:   4 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	out 
+  INFO    machine:tick          TICK:  39 PC:   5 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	jmp 0
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'jmp', 'arg': 0, 'addressingType': 0}
+  INFO    machine:tick          TICK:  40 PC:   5 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	jmp 0
+  INFO    machine:tick          TICK:  41 PC:   5 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	jmp 0
+  INFO    machine:tick          TICK:  42 PC:   0 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	in 
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'in', 'arg': '', 'addressingType': 0}
+  INFO    machine:tick          TICK:  43 PC:   0 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	in 
+  INFO    machine:tick          TICK:  44 PC:   0 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	in 
+  INFO    machine:tick          TICK:  45 PC:   1 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	st 0
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'st', 'arg': 0, 'addressingType': 0}
+  INFO    machine:tick          TICK:  46 PC:   1 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	st 0
+  INFO    machine:tick          TICK:  47 PC:   1 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	st 0
+  DEBUG   machine:latch_memory  latch_memory: 0 : 111
+  INFO    machine:tick          TICK:  48 PC:   1 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	st 0
+  INFO    machine:tick          TICK:  49 PC:   2 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	bz 6
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'bz', 'arg': 6, 'addressingType': 0}
+  INFO    machine:tick          TICK:  50 PC:   2 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	bz 6
+  INFO    machine:tick          TICK:  51 PC:   2 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	bz 6
+  INFO    machine:tick          TICK:  52 PC:   3 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	ld 0
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'ld', 'arg': 0, 'addressingType': 0}
+  INFO    machine:tick          TICK:  53 PC:   3 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	ld 0
+  INFO    machine:tick          TICK:  54 PC:   3 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	ld 0
+  INFO    machine:tick          TICK:  55 PC:   3 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	ld 0
+  INFO    machine:tick          TICK:  56 PC:   3 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	ld 0
+  INFO    machine:tick          TICK:  57 PC:   4 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	out 
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'out', 'arg': '', 'addressingType': 0}
+  INFO    machine:tick          TICK:  58 PC:   4 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	out 
+  DEBUG   machine:signal_output output: fo << o
+  INFO    machine:tick          TICK:  59 PC:   4 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	out 
+  INFO    machine:tick          TICK:  60 PC:   5 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	jmp 0
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'jmp', 'arg': 0, 'addressingType': 0}
+  INFO    machine:tick          TICK:  61 PC:   5 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	jmp 0
+  INFO    machine:tick          TICK:  62 PC:   5 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	jmp 0
+  INFO    machine:tick          TICK:  63 PC:   0 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	in 
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'in', 'arg': '', 'addressingType': 0}
+  INFO    machine:tick          TICK:  64 PC:   0 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 111 	in 
+  ERROR   machine:decode_and_execute_instruction end of Input
+  INFO    machine:tick          TICK:  65 PC:   0 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 0 	in 
+  INFO    machine:tick          TICK:  66 PC:   1 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 0 	st 0
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'st', 'arg': 0, 'addressingType': 0}
+  INFO    machine:tick          TICK:  67 PC:   1 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 0 	st 0
+  INFO    machine:tick          TICK:  68 PC:   1 ADDR:   0 MEM_OUT: 111 DATA_REG 111 ACC: 0 	st 0
+  DEBUG   machine:latch_memory  latch_memory: 0 : 0
+  INFO    machine:tick          TICK:  69 PC:   1 ADDR:   0 MEM_OUT: 0 DATA_REG 111 ACC: 0 	st 0
+  INFO    machine:tick          TICK:  70 PC:   2 ADDR:   0 MEM_OUT: 0 DATA_REG 111 ACC: 0 	bz 6
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'bz', 'arg': 6, 'addressingType': 0}
+  INFO    machine:tick          TICK:  71 PC:   2 ADDR:   0 MEM_OUT: 0 DATA_REG 111 ACC: 0 	bz 6
+  INFO    machine:tick          TICK:  72 PC:   2 ADDR:   0 MEM_OUT: 0 DATA_REG 111 ACC: 0 	bz 6
+  INFO    machine:tick          TICK:  73 PC:   6 ADDR:   0 MEM_OUT: 0 DATA_REG 111 ACC: 0 	hlt 
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'hlt', 'arg': '', 'addressingType': 0}
+  INFO    machine:tick          TICK:  74 PC:   6 ADDR:   0 MEM_OUT: 0 DATA_REG 111 ACC: 0 	hlt 
+  INFO    machine:simulation    output_buffer: 'foo'

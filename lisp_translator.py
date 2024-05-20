@@ -63,15 +63,19 @@ def translate(in_filename, out_filename):
     with open(in_filename, 'r') as code:
         text = code.read().replace("\n", "")
         operations = parse(text)
-        print(operations)
+        # print(operations)
         address_manager = AddressManager()
         translate_level(operations, address_manager)
         address_manager.add_instruction(Opcode.HLT)
         print(address_manager.memory)
         # address_manager.get_instructions()
-        address_manager.write_to_file("out.json")
+        address_manager.write_to_file(out_filename)
+
+
+def main(in_filename, out_filename):
+    translate(in_filename, out_filename)
 
 
 if __name__ == '__main__':
     assert len(sys.argv) == 3, "Wrong arguments: machine.py <code_file> <input_file>"
-    translate(sys.argv[1], sys.argv[2])
+    main(sys.argv[1], sys.argv[2])
