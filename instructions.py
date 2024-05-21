@@ -299,7 +299,7 @@ def call_function(address_manager: AddressManager, args):
     address_manager.add_instruction(Opcode.LD, addr)
     push(address_manager)
     for op in args[1:][0]:
-        translate_level(op, address_manager)
+        translate_level([op], address_manager)
         push(address_manager)
     address_manager.add_instruction(Opcode.JMP, address_manager.get_function(funcname))
     address_manager.memory[addr] = address_manager.get_instruction_pointer() + 1

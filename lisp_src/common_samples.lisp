@@ -1,8 +1,9 @@
-(
-    (var y [40])
-    (print_string "What is your name?")
-    (read_line y)
-    (print_string "Hello, ")
-    (print_string y)
-    (print_string "!")
-)
+(defunc tail_recursion_loop (i) (
+    (var char 0)
+    (set char (+ i 48))
+    (printc char)
+    (print_string "\\n")
+    (set i (- i 1))
+    (if (= i 0) (0)(funcall tail_recursion_loop (i)))
+ ))
+(funcall tail_recursion_loop (9))
