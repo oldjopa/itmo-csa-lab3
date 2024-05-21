@@ -256,6 +256,6 @@ golden_lisp_test.py::test_translator_and_machine[golden/prob2_lisp.yml] PASSED [
 
 ```
 | ФИО                        | алг             | LoC | code байт | code инстр. | инстр. | такт.  | вариант                                                                                       |
-| Янковой Леонид Кириллович  | hello_user_name | 8   | -         | 57          | 377    | 1515   | lisp -> asm | acc | harv | hw | tick -> instr | struct | stream | port | pstr | prob2 | cache |
+| Янковой Леонид Кириллович  | hello_user_name | 8   | -         | 57          | 388    | 1570   | lisp -> asm | acc | harv | hw | tick -> instr | struct | stream | port | pstr | prob2 | cache |
 | Янковой Леонид Кириллович  | cat             | 4   | -         | 6           | 21     | 74     | lisp -> asm | acc | harv | hw | tick -> instr | struct | stream | port | pstr | prob2 | cache |
 | Янковой Леонид Кириллович  | prob2           | 9   | -         | 28          | 687    | 2798   | lisp -> asm | acc | harv | hw | tick -> instr | struct | stream | port | pstr | prob2 | cache |```
