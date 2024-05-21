@@ -47,9 +47,9 @@ class AddressManager:
         if isinstance(value, str):
             if "[" in value:
                 length = int(value[value.index("[") + 1 : -1])
-                self.variables[varlabel] = self._allocate_new_mem(length, length)
+                self.variables[varlabel] = self.allocate_static_memory(self._allocate_new_mem(length, length))
             else:
-                self.variables[varlabel] = self.allocate_static_string(value)
+                self.variables[varlabel] = self.allocate_static_memory(self.allocate_static_string(value))
         else:
             self.variables[varlabel] = self._allocate_new_mem(ONE_WORD, value)
         return self.variables[varlabel]
@@ -94,11 +94,11 @@ class AddressManager:
         if not isinstance(token, list):
             if token in self.variables.keys():
                 return self.variables[token]
-        try:
-            number = int(token)
-            return self.allocate_static_memory(number)
-        except ValueError:
-            return self.allocate_static_string(token)
+            try:
+                number = int(token)
+                return self.allocate_static_memory(number)
+            except ValueError:
+                return self.allocate_static_memory(self.allocate_static_string(token))
 
     def enter_func(self):
         self.depth += 1

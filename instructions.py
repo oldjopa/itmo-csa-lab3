@@ -131,7 +131,11 @@ def fun_input(address_manager: AddressManager, args):
 
 
 def fun_readline(address_manager: AddressManager, args):
-    pointer = address_manager.get_address_for(args[0] + 1)
+    pointer_pointer = address_manager.get_address_for(args[0])
+    pointer = address_manager.allocate_buffer_memory()
+    address_manager.add_instruction(Opcode.LD, pointer_pointer, AddressingType.INDIRECT)
+    address_manager.add_instruction(Opcode.INC)
+    address_manager.add_instruction(Opcode.ST, pointer)
     counter = address_manager.allocate_static_memory(0)
     newline = address_manager.allocate_static_memory(ord("\n"))
     address_manager.add_instruction(Opcode.IN)
@@ -147,14 +151,24 @@ def fun_readline(address_manager: AddressManager, args):
     address_manager.add_instruction(Opcode.ST, counter)
     address_manager.add_instruction(Opcode.JMP, branch_pointer)
     address_manager.add_instruction(Opcode.LD, counter)
-    address_manager.add_instruction(Opcode.ST, args[0])
+    address_manager.add_instruction(Opcode.ST, args[0], AddressingType.INDIRECT)
     address_manager.free_buffer_memory()
 
 
 def fun_print_string(address_manager: AddressManager, args):
-    string_pointer = address_manager.get_address_for(args[0])
+    print(args, address_manager.get_instruction_pointer())
     out_counter = address_manager.allocate_buffer_memory()
-    address_manager.add_instruction(Opcode.LD, args[0])
+    string_pointer = address_manager.allocate_buffer_memory()
+    if type(args[0]) is list:
+        translate_level(args[0], address_manager)
+        string_pointer = address_manager.allocate_buffer_memory()
+        address_manager.add_instruction(Opcode.ST, string_pointer)
+        address_manager.add_instruction(Opcode.LD, string_pointer, addressing=AddressingType.INDIRECT)
+    else:
+        string_pointer = address_manager.allocate_buffer_memory()
+        address_manager.add_instruction(Opcode.LD, args[0])
+        address_manager.add_instruction(Opcode.ST, string_pointer)
+        address_manager.add_instruction(Opcode.LD, args[0], AddressingType.INDIRECT)
     address_manager.add_instruction(Opcode.ST, out_counter)
     address_manager.add_instruction(Opcode.LD, string_pointer)
     branch_pointer = address_manager.get_instruction_pointer()
@@ -229,11 +243,8 @@ def translate_level(operations, address_manager):
             translate_level(op, address_manager)
         return None
     if len(operations) == 1:
-        try:
-            address_manager.add_instruction(Opcode.LD, address_manager.get_address_for(operations[0]))
-            return None
-        except Exception:
-            print("no such variable: " + operations[0])
+        address_manager.add_instruction(Opcode.LD, address_manager.get_address_for(operations[0]))
+        return
     operation = operations[0]
     funcname = ""
     if operation == "funcall":
