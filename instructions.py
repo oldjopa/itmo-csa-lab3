@@ -78,12 +78,12 @@ def div(address_manager, args):
     translate_req_order(address_manager, args, Opcode.DIV)
 
 
-#  lint idi nahui def op_and(address_manager, args):
-#  lint idi nahui     translate_no_order(address_manager, args, Opcode.AND)
-# lint idi nahui
-# lint idi nahui
-#  lint idi nahui def op_or(address_manager, args):
-#  lint idi nahui     translate_no_order(address_manager, args, Opcode.OR)
+# def op_and(address_manager, args):
+#     translate_no_order(address_manager, args, Opcode.AND)
+#
+#
+# def op_or(address_manager, args):
+#     translate_no_order(address_manager, args, Opcode.OR)
 
 
 def cond_if(address_manager: AddressManager, args):
