@@ -252,7 +252,6 @@ golden_lisp_test.py::test_translator_and_machine[golden/prob2_lisp.yml] PASSED [
 ================================ 4 passed in 0.77s =================================
 ```
 
-
 ### Статистика
 
 ```
