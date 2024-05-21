@@ -156,10 +156,8 @@ def fun_readline(address_manager: AddressManager, args):
 
 
 def fun_print_string(address_manager: AddressManager, args):
-    print(args, address_manager.get_instruction_pointer())
     out_counter = address_manager.allocate_buffer_memory()
-    string_pointer = address_manager.allocate_buffer_memory()
-    if type(args[0]) is list:
+    if isinstance(args[0], list):
         translate_level(args[0], address_manager)
         string_pointer = address_manager.allocate_buffer_memory()
         address_manager.add_instruction(Opcode.ST, string_pointer)

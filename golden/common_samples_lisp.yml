@@ -44,48 +44,48 @@ out_log: |
   INFO    machine:tick          TICK:  24 PC:  10 ADDR:   7 MEM_OUT: 5 DATA_REG 10 ACC: 0 	ld 7
   INFO    machine:tick          TICK:  25 PC:  10 ADDR:   7 MEM_OUT: 5 DATA_REG 5 ACC: 0 	ld 7
   INFO    machine:tick          TICK:  26 PC:  10 ADDR:   7 MEM_OUT: 5 DATA_REG 5 ACC: 5 	ld 7
-  INFO    machine:tick          TICK:  27 PC:  11 ADDR:   7 MEM_OUT: 5 DATA_REG 5 ACC: 5 	st 513
-  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'st', 'arg': 513, 'addressingType': 0}
-  INFO    machine:tick          TICK:  28 PC:  11 ADDR:   7 MEM_OUT: 5 DATA_REG 5 ACC: 5 	st 513
-  INFO    machine:tick          TICK:  29 PC:  11 ADDR: 513 MEM_OUT: 0 DATA_REG 5 ACC: 5 	st 513
-  DEBUG   machine:latch_memory  latch_memory: 513 : 5
-  INFO    machine:tick          TICK:  30 PC:  11 ADDR: 513 MEM_OUT: 5 DATA_REG 5 ACC: 5 	st 513
-  INFO    machine:tick          TICK:  31 PC:  12 ADDR: 513 MEM_OUT: 5 DATA_REG 5 ACC: 5 	ld 513
-  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'ld', 'arg': 513, 'addressingType': 1}
-  INFO    machine:tick          TICK:  32 PC:  12 ADDR: 513 MEM_OUT: 5 DATA_REG 5 ACC: 5 	ld 513
-  INFO    machine:tick          TICK:  33 PC:  12 ADDR: 513 MEM_OUT: 5 DATA_REG 5 ACC: 5 	ld 513
-  INFO    machine:tick          TICK:  34 PC:  12 ADDR:   5 MEM_OUT: 1 DATA_REG 5 ACC: 5 	ld 513
-  INFO    machine:tick          TICK:  35 PC:  12 ADDR:   5 MEM_OUT: 1 DATA_REG 1 ACC: 5 	ld 513
-  INFO    machine:tick          TICK:  36 PC:  12 ADDR:   5 MEM_OUT: 1 DATA_REG 1 ACC: 1 	ld 513
+  INFO    machine:tick          TICK:  27 PC:  11 ADDR:   7 MEM_OUT: 5 DATA_REG 5 ACC: 5 	st 512
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'st', 'arg': 512, 'addressingType': 0}
+  INFO    machine:tick          TICK:  28 PC:  11 ADDR:   7 MEM_OUT: 5 DATA_REG 5 ACC: 5 	st 512
+  INFO    machine:tick          TICK:  29 PC:  11 ADDR: 512 MEM_OUT: 0 DATA_REG 5 ACC: 5 	st 512
+  DEBUG   machine:latch_memory  latch_memory: 512 : 5
+  INFO    machine:tick          TICK:  30 PC:  11 ADDR: 512 MEM_OUT: 5 DATA_REG 5 ACC: 5 	st 512
+  INFO    machine:tick          TICK:  31 PC:  12 ADDR: 512 MEM_OUT: 5 DATA_REG 5 ACC: 5 	ld 512
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'ld', 'arg': 512, 'addressingType': 1}
+  INFO    machine:tick          TICK:  32 PC:  12 ADDR: 512 MEM_OUT: 5 DATA_REG 5 ACC: 5 	ld 512
+  INFO    machine:tick          TICK:  33 PC:  12 ADDR: 512 MEM_OUT: 5 DATA_REG 5 ACC: 5 	ld 512
+  INFO    machine:tick          TICK:  34 PC:  12 ADDR:   5 MEM_OUT: 1 DATA_REG 5 ACC: 5 	ld 512
+  INFO    machine:tick          TICK:  35 PC:  12 ADDR:   5 MEM_OUT: 1 DATA_REG 1 ACC: 5 	ld 512
+  INFO    machine:tick          TICK:  36 PC:  12 ADDR:   5 MEM_OUT: 1 DATA_REG 1 ACC: 1 	ld 512
   INFO    machine:tick          TICK:  37 PC:  13 ADDR:   5 MEM_OUT: 1 DATA_REG 1 ACC: 1 	st 511
   INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'st', 'arg': 511, 'addressingType': 0}
   INFO    machine:tick          TICK:  38 PC:  13 ADDR:   5 MEM_OUT: 1 DATA_REG 1 ACC: 1 	st 511
   INFO    machine:tick          TICK:  39 PC:  13 ADDR: 511 MEM_OUT: 0 DATA_REG 1 ACC: 1 	st 511
   DEBUG   machine:latch_memory  latch_memory: 511 : 1
   INFO    machine:tick          TICK:  40 PC:  13 ADDR: 511 MEM_OUT: 1 DATA_REG 1 ACC: 1 	st 511
-  INFO    machine:tick          TICK:  41 PC:  14 ADDR: 511 MEM_OUT: 1 DATA_REG 1 ACC: 1 	ld 513
-  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'ld', 'arg': 513, 'addressingType': 0}
-  INFO    machine:tick          TICK:  42 PC:  14 ADDR: 511 MEM_OUT: 1 DATA_REG 1 ACC: 1 	ld 513
-  INFO    machine:tick          TICK:  43 PC:  14 ADDR: 513 MEM_OUT: 5 DATA_REG 1 ACC: 1 	ld 513
-  INFO    machine:tick          TICK:  44 PC:  14 ADDR: 513 MEM_OUT: 5 DATA_REG 5 ACC: 1 	ld 513
-  INFO    machine:tick          TICK:  45 PC:  14 ADDR: 513 MEM_OUT: 5 DATA_REG 5 ACC: 5 	ld 513
-  INFO    machine:tick          TICK:  46 PC:  15 ADDR: 513 MEM_OUT: 5 DATA_REG 5 ACC: 5 	inc 
+  INFO    machine:tick          TICK:  41 PC:  14 ADDR: 511 MEM_OUT: 1 DATA_REG 1 ACC: 1 	ld 512
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'ld', 'arg': 512, 'addressingType': 0}
+  INFO    machine:tick          TICK:  42 PC:  14 ADDR: 511 MEM_OUT: 1 DATA_REG 1 ACC: 1 	ld 512
+  INFO    machine:tick          TICK:  43 PC:  14 ADDR: 512 MEM_OUT: 5 DATA_REG 1 ACC: 1 	ld 512
+  INFO    machine:tick          TICK:  44 PC:  14 ADDR: 512 MEM_OUT: 5 DATA_REG 5 ACC: 1 	ld 512
+  INFO    machine:tick          TICK:  45 PC:  14 ADDR: 512 MEM_OUT: 5 DATA_REG 5 ACC: 5 	ld 512
+  INFO    machine:tick          TICK:  46 PC:  15 ADDR: 512 MEM_OUT: 5 DATA_REG 5 ACC: 5 	inc 
   INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'inc', 'arg': '', 'addressingType': 0}
-  INFO    machine:tick          TICK:  47 PC:  15 ADDR: 513 MEM_OUT: 5 DATA_REG 5 ACC: 5 	inc 
-  INFO    machine:tick          TICK:  48 PC:  15 ADDR: 513 MEM_OUT: 5 DATA_REG 5 ACC: 6 	inc 
-  INFO    machine:tick          TICK:  49 PC:  16 ADDR: 513 MEM_OUT: 5 DATA_REG 5 ACC: 6 	st 513
-  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'st', 'arg': 513, 'addressingType': 0}
-  INFO    machine:tick          TICK:  50 PC:  16 ADDR: 513 MEM_OUT: 5 DATA_REG 5 ACC: 6 	st 513
-  INFO    machine:tick          TICK:  51 PC:  16 ADDR: 513 MEM_OUT: 5 DATA_REG 5 ACC: 6 	st 513
-  DEBUG   machine:latch_memory  latch_memory: 513 : 6
-  INFO    machine:tick          TICK:  52 PC:  16 ADDR: 513 MEM_OUT: 6 DATA_REG 5 ACC: 6 	st 513
-  INFO    machine:tick          TICK:  53 PC:  17 ADDR: 513 MEM_OUT: 6 DATA_REG 5 ACC: 6 	ld 513
-  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'ld', 'arg': 513, 'addressingType': 1}
-  INFO    machine:tick          TICK:  54 PC:  17 ADDR: 513 MEM_OUT: 6 DATA_REG 5 ACC: 6 	ld 513
-  INFO    machine:tick          TICK:  55 PC:  17 ADDR: 513 MEM_OUT: 6 DATA_REG 5 ACC: 6 	ld 513
-  INFO    machine:tick          TICK:  56 PC:  17 ADDR:   6 MEM_OUT: 70 DATA_REG 6 ACC: 6 	ld 513
-  INFO    machine:tick          TICK:  57 PC:  17 ADDR:   6 MEM_OUT: 70 DATA_REG 70 ACC: 6 	ld 513
-  INFO    machine:tick          TICK:  58 PC:  17 ADDR:   6 MEM_OUT: 70 DATA_REG 70 ACC: 70 	ld 513
+  INFO    machine:tick          TICK:  47 PC:  15 ADDR: 512 MEM_OUT: 5 DATA_REG 5 ACC: 5 	inc 
+  INFO    machine:tick          TICK:  48 PC:  15 ADDR: 512 MEM_OUT: 5 DATA_REG 5 ACC: 6 	inc 
+  INFO    machine:tick          TICK:  49 PC:  16 ADDR: 512 MEM_OUT: 5 DATA_REG 5 ACC: 6 	st 512
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'st', 'arg': 512, 'addressingType': 0}
+  INFO    machine:tick          TICK:  50 PC:  16 ADDR: 512 MEM_OUT: 5 DATA_REG 5 ACC: 6 	st 512
+  INFO    machine:tick          TICK:  51 PC:  16 ADDR: 512 MEM_OUT: 5 DATA_REG 5 ACC: 6 	st 512
+  DEBUG   machine:latch_memory  latch_memory: 512 : 6
+  INFO    machine:tick          TICK:  52 PC:  16 ADDR: 512 MEM_OUT: 6 DATA_REG 5 ACC: 6 	st 512
+  INFO    machine:tick          TICK:  53 PC:  17 ADDR: 512 MEM_OUT: 6 DATA_REG 5 ACC: 6 	ld 512
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'ld', 'arg': 512, 'addressingType': 1}
+  INFO    machine:tick          TICK:  54 PC:  17 ADDR: 512 MEM_OUT: 6 DATA_REG 5 ACC: 6 	ld 512
+  INFO    machine:tick          TICK:  55 PC:  17 ADDR: 512 MEM_OUT: 6 DATA_REG 5 ACC: 6 	ld 512
+  INFO    machine:tick          TICK:  56 PC:  17 ADDR:   6 MEM_OUT: 70 DATA_REG 6 ACC: 6 	ld 512
+  INFO    machine:tick          TICK:  57 PC:  17 ADDR:   6 MEM_OUT: 70 DATA_REG 70 ACC: 6 	ld 512
+  INFO    machine:tick          TICK:  58 PC:  17 ADDR:   6 MEM_OUT: 70 DATA_REG 70 ACC: 70 	ld 512
   INFO    machine:tick          TICK:  59 PC:  18 ADDR:   6 MEM_OUT: 70 DATA_REG 70 ACC: 70 	out 
   INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'out', 'arg': '', 'addressingType': 0}
   INFO    machine:tick          TICK:  60 PC:  18 ADDR:   6 MEM_OUT: 70 DATA_REG 70 ACC: 70 	out 
@@ -390,80 +390,80 @@ out_log: |
   INFO    machine:tick          TICK: 288 PC:  73 ADDR:  15 MEM_OUT: 13 DATA_REG 19 ACC: 1 	ld 15
   INFO    machine:tick          TICK: 289 PC:  73 ADDR:  15 MEM_OUT: 13 DATA_REG 13 ACC: 1 	ld 15
   INFO    machine:tick          TICK: 290 PC:  73 ADDR:  15 MEM_OUT: 13 DATA_REG 13 ACC: 13 	ld 15
-  INFO    machine:tick          TICK: 291 PC:  74 ADDR:  15 MEM_OUT: 13 DATA_REG 13 ACC: 13 	st 515
-  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'st', 'arg': 515, 'addressingType': 0}
-  INFO    machine:tick          TICK: 292 PC:  74 ADDR:  15 MEM_OUT: 13 DATA_REG 13 ACC: 13 	st 515
-  INFO    machine:tick          TICK: 293 PC:  74 ADDR: 515 MEM_OUT: 0 DATA_REG 13 ACC: 13 	st 515
-  DEBUG   machine:latch_memory  latch_memory: 515 : 13
-  INFO    machine:tick          TICK: 294 PC:  74 ADDR: 515 MEM_OUT: 13 DATA_REG 13 ACC: 13 	st 515
-  INFO    machine:tick          TICK: 295 PC:  75 ADDR: 515 MEM_OUT: 13 DATA_REG 13 ACC: 13 	ld 15
+  INFO    machine:tick          TICK: 291 PC:  74 ADDR:  15 MEM_OUT: 13 DATA_REG 13 ACC: 13 	st 513
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'st', 'arg': 513, 'addressingType': 0}
+  INFO    machine:tick          TICK: 292 PC:  74 ADDR:  15 MEM_OUT: 13 DATA_REG 13 ACC: 13 	st 513
+  INFO    machine:tick          TICK: 293 PC:  74 ADDR: 513 MEM_OUT: 0 DATA_REG 13 ACC: 13 	st 513
+  DEBUG   machine:latch_memory  latch_memory: 513 : 13
+  INFO    machine:tick          TICK: 294 PC:  74 ADDR: 513 MEM_OUT: 13 DATA_REG 13 ACC: 13 	st 513
+  INFO    machine:tick          TICK: 295 PC:  75 ADDR: 513 MEM_OUT: 13 DATA_REG 13 ACC: 13 	ld 15
   INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'ld', 'arg': 15, 'addressingType': 1}
-  INFO    machine:tick          TICK: 296 PC:  75 ADDR: 515 MEM_OUT: 13 DATA_REG 13 ACC: 13 	ld 15
+  INFO    machine:tick          TICK: 296 PC:  75 ADDR: 513 MEM_OUT: 13 DATA_REG 13 ACC: 13 	ld 15
   INFO    machine:tick          TICK: 297 PC:  75 ADDR:  15 MEM_OUT: 13 DATA_REG 13 ACC: 13 	ld 15
   INFO    machine:tick          TICK: 298 PC:  75 ADDR:  13 MEM_OUT: 1 DATA_REG 13 ACC: 13 	ld 15
   INFO    machine:tick          TICK: 299 PC:  75 ADDR:  13 MEM_OUT: 1 DATA_REG 1 ACC: 13 	ld 15
   INFO    machine:tick          TICK: 300 PC:  75 ADDR:  13 MEM_OUT: 1 DATA_REG 1 ACC: 1 	ld 15
-  INFO    machine:tick          TICK: 301 PC:  76 ADDR:  13 MEM_OUT: 1 DATA_REG 1 ACC: 1 	st 513
-  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'st', 'arg': 513, 'addressingType': 0}
-  INFO    machine:tick          TICK: 302 PC:  76 ADDR:  13 MEM_OUT: 1 DATA_REG 1 ACC: 1 	st 513
-  INFO    machine:tick          TICK: 303 PC:  76 ADDR: 513 MEM_OUT: 6 DATA_REG 1 ACC: 1 	st 513
-  DEBUG   machine:latch_memory  latch_memory: 513 : 1
-  INFO    machine:tick          TICK: 304 PC:  76 ADDR: 513 MEM_OUT: 1 DATA_REG 1 ACC: 1 	st 513
-  INFO    machine:tick          TICK: 305 PC:  77 ADDR: 513 MEM_OUT: 1 DATA_REG 1 ACC: 1 	ld 515
-  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'ld', 'arg': 515, 'addressingType': 0}
-  INFO    machine:tick          TICK: 306 PC:  77 ADDR: 513 MEM_OUT: 1 DATA_REG 1 ACC: 1 	ld 515
-  INFO    machine:tick          TICK: 307 PC:  77 ADDR: 515 MEM_OUT: 13 DATA_REG 1 ACC: 1 	ld 515
-  INFO    machine:tick          TICK: 308 PC:  77 ADDR: 515 MEM_OUT: 13 DATA_REG 13 ACC: 1 	ld 515
-  INFO    machine:tick          TICK: 309 PC:  77 ADDR: 515 MEM_OUT: 13 DATA_REG 13 ACC: 13 	ld 515
-  INFO    machine:tick          TICK: 310 PC:  78 ADDR: 515 MEM_OUT: 13 DATA_REG 13 ACC: 13 	inc 
+  INFO    machine:tick          TICK: 301 PC:  76 ADDR:  13 MEM_OUT: 1 DATA_REG 1 ACC: 1 	st 512
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'st', 'arg': 512, 'addressingType': 0}
+  INFO    machine:tick          TICK: 302 PC:  76 ADDR:  13 MEM_OUT: 1 DATA_REG 1 ACC: 1 	st 512
+  INFO    machine:tick          TICK: 303 PC:  76 ADDR: 512 MEM_OUT: 6 DATA_REG 1 ACC: 1 	st 512
+  DEBUG   machine:latch_memory  latch_memory: 512 : 1
+  INFO    machine:tick          TICK: 304 PC:  76 ADDR: 512 MEM_OUT: 1 DATA_REG 1 ACC: 1 	st 512
+  INFO    machine:tick          TICK: 305 PC:  77 ADDR: 512 MEM_OUT: 1 DATA_REG 1 ACC: 1 	ld 513
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'ld', 'arg': 513, 'addressingType': 0}
+  INFO    machine:tick          TICK: 306 PC:  77 ADDR: 512 MEM_OUT: 1 DATA_REG 1 ACC: 1 	ld 513
+  INFO    machine:tick          TICK: 307 PC:  77 ADDR: 513 MEM_OUT: 13 DATA_REG 1 ACC: 1 	ld 513
+  INFO    machine:tick          TICK: 308 PC:  77 ADDR: 513 MEM_OUT: 13 DATA_REG 13 ACC: 1 	ld 513
+  INFO    machine:tick          TICK: 309 PC:  77 ADDR: 513 MEM_OUT: 13 DATA_REG 13 ACC: 13 	ld 513
+  INFO    machine:tick          TICK: 310 PC:  78 ADDR: 513 MEM_OUT: 13 DATA_REG 13 ACC: 13 	inc 
   INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'inc', 'arg': '', 'addressingType': 0}
-  INFO    machine:tick          TICK: 311 PC:  78 ADDR: 515 MEM_OUT: 13 DATA_REG 13 ACC: 13 	inc 
-  INFO    machine:tick          TICK: 312 PC:  78 ADDR: 515 MEM_OUT: 13 DATA_REG 13 ACC: 14 	inc 
-  INFO    machine:tick          TICK: 313 PC:  79 ADDR: 515 MEM_OUT: 13 DATA_REG 13 ACC: 14 	st 515
-  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'st', 'arg': 515, 'addressingType': 0}
-  INFO    machine:tick          TICK: 314 PC:  79 ADDR: 515 MEM_OUT: 13 DATA_REG 13 ACC: 14 	st 515
-  INFO    machine:tick          TICK: 315 PC:  79 ADDR: 515 MEM_OUT: 13 DATA_REG 13 ACC: 14 	st 515
-  DEBUG   machine:latch_memory  latch_memory: 515 : 14
-  INFO    machine:tick          TICK: 316 PC:  79 ADDR: 515 MEM_OUT: 14 DATA_REG 13 ACC: 14 	st 515
-  INFO    machine:tick          TICK: 317 PC:  80 ADDR: 515 MEM_OUT: 14 DATA_REG 13 ACC: 14 	ld 515
-  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'ld', 'arg': 515, 'addressingType': 1}
-  INFO    machine:tick          TICK: 318 PC:  80 ADDR: 515 MEM_OUT: 14 DATA_REG 13 ACC: 14 	ld 515
-  INFO    machine:tick          TICK: 319 PC:  80 ADDR: 515 MEM_OUT: 14 DATA_REG 13 ACC: 14 	ld 515
-  INFO    machine:tick          TICK: 320 PC:  80 ADDR:  14 MEM_OUT: 84 DATA_REG 14 ACC: 14 	ld 515
-  INFO    machine:tick          TICK: 321 PC:  80 ADDR:  14 MEM_OUT: 84 DATA_REG 84 ACC: 14 	ld 515
-  INFO    machine:tick          TICK: 322 PC:  80 ADDR:  14 MEM_OUT: 84 DATA_REG 84 ACC: 84 	ld 515
+  INFO    machine:tick          TICK: 311 PC:  78 ADDR: 513 MEM_OUT: 13 DATA_REG 13 ACC: 13 	inc 
+  INFO    machine:tick          TICK: 312 PC:  78 ADDR: 513 MEM_OUT: 13 DATA_REG 13 ACC: 14 	inc 
+  INFO    machine:tick          TICK: 313 PC:  79 ADDR: 513 MEM_OUT: 13 DATA_REG 13 ACC: 14 	st 513
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'st', 'arg': 513, 'addressingType': 0}
+  INFO    machine:tick          TICK: 314 PC:  79 ADDR: 513 MEM_OUT: 13 DATA_REG 13 ACC: 14 	st 513
+  INFO    machine:tick          TICK: 315 PC:  79 ADDR: 513 MEM_OUT: 13 DATA_REG 13 ACC: 14 	st 513
+  DEBUG   machine:latch_memory  latch_memory: 513 : 14
+  INFO    machine:tick          TICK: 316 PC:  79 ADDR: 513 MEM_OUT: 14 DATA_REG 13 ACC: 14 	st 513
+  INFO    machine:tick          TICK: 317 PC:  80 ADDR: 513 MEM_OUT: 14 DATA_REG 13 ACC: 14 	ld 513
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'ld', 'arg': 513, 'addressingType': 1}
+  INFO    machine:tick          TICK: 318 PC:  80 ADDR: 513 MEM_OUT: 14 DATA_REG 13 ACC: 14 	ld 513
+  INFO    machine:tick          TICK: 319 PC:  80 ADDR: 513 MEM_OUT: 14 DATA_REG 13 ACC: 14 	ld 513
+  INFO    machine:tick          TICK: 320 PC:  80 ADDR:  14 MEM_OUT: 84 DATA_REG 14 ACC: 14 	ld 513
+  INFO    machine:tick          TICK: 321 PC:  80 ADDR:  14 MEM_OUT: 84 DATA_REG 84 ACC: 14 	ld 513
+  INFO    machine:tick          TICK: 322 PC:  80 ADDR:  14 MEM_OUT: 84 DATA_REG 84 ACC: 84 	ld 513
   INFO    machine:tick          TICK: 323 PC:  81 ADDR:  14 MEM_OUT: 84 DATA_REG 84 ACC: 84 	out 
   INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'out', 'arg': '', 'addressingType': 0}
   INFO    machine:tick          TICK: 324 PC:  81 ADDR:  14 MEM_OUT: 84 DATA_REG 84 ACC: 84 	out 
   DEBUG   machine:signal_output output: F << T
   INFO    machine:tick          TICK: 325 PC:  81 ADDR:  14 MEM_OUT: 84 DATA_REG 84 ACC: 84 	out 
-  INFO    machine:tick          TICK: 326 PC:  82 ADDR:  14 MEM_OUT: 84 DATA_REG 84 ACC: 84 	ld 513
-  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'ld', 'arg': 513, 'addressingType': 0}
-  INFO    machine:tick          TICK: 327 PC:  82 ADDR:  14 MEM_OUT: 84 DATA_REG 84 ACC: 84 	ld 513
-  INFO    machine:tick          TICK: 328 PC:  82 ADDR: 513 MEM_OUT: 1 DATA_REG 84 ACC: 84 	ld 513
-  INFO    machine:tick          TICK: 329 PC:  82 ADDR: 513 MEM_OUT: 1 DATA_REG 1 ACC: 84 	ld 513
-  INFO    machine:tick          TICK: 330 PC:  82 ADDR: 513 MEM_OUT: 1 DATA_REG 1 ACC: 1 	ld 513
-  INFO    machine:tick          TICK: 331 PC:  83 ADDR: 513 MEM_OUT: 1 DATA_REG 1 ACC: 1 	dec 
+  INFO    machine:tick          TICK: 326 PC:  82 ADDR:  14 MEM_OUT: 84 DATA_REG 84 ACC: 84 	ld 512
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'ld', 'arg': 512, 'addressingType': 0}
+  INFO    machine:tick          TICK: 327 PC:  82 ADDR:  14 MEM_OUT: 84 DATA_REG 84 ACC: 84 	ld 512
+  INFO    machine:tick          TICK: 328 PC:  82 ADDR: 512 MEM_OUT: 1 DATA_REG 84 ACC: 84 	ld 512
+  INFO    machine:tick          TICK: 329 PC:  82 ADDR: 512 MEM_OUT: 1 DATA_REG 1 ACC: 84 	ld 512
+  INFO    machine:tick          TICK: 330 PC:  82 ADDR: 512 MEM_OUT: 1 DATA_REG 1 ACC: 1 	ld 512
+  INFO    machine:tick          TICK: 331 PC:  83 ADDR: 512 MEM_OUT: 1 DATA_REG 1 ACC: 1 	dec 
   INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'dec', 'arg': '', 'addressingType': 0}
-  INFO    machine:tick          TICK: 332 PC:  83 ADDR: 513 MEM_OUT: 1 DATA_REG 1 ACC: 1 	dec 
-  INFO    machine:tick          TICK: 333 PC:  83 ADDR: 513 MEM_OUT: 1 DATA_REG 1 ACC: 0 	dec 
-  INFO    machine:tick          TICK: 334 PC:  84 ADDR: 513 MEM_OUT: 1 DATA_REG 1 ACC: 0 	st 513
-  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'st', 'arg': 513, 'addressingType': 0}
-  INFO    machine:tick          TICK: 335 PC:  84 ADDR: 513 MEM_OUT: 1 DATA_REG 1 ACC: 0 	st 513
-  INFO    machine:tick          TICK: 336 PC:  84 ADDR: 513 MEM_OUT: 1 DATA_REG 1 ACC: 0 	st 513
-  DEBUG   machine:latch_memory  latch_memory: 513 : 0
-  INFO    machine:tick          TICK: 337 PC:  84 ADDR: 513 MEM_OUT: 0 DATA_REG 1 ACC: 0 	st 513
-  INFO    machine:tick          TICK: 338 PC:  85 ADDR: 513 MEM_OUT: 0 DATA_REG 1 ACC: 0 	bnz 77
+  INFO    machine:tick          TICK: 332 PC:  83 ADDR: 512 MEM_OUT: 1 DATA_REG 1 ACC: 1 	dec 
+  INFO    machine:tick          TICK: 333 PC:  83 ADDR: 512 MEM_OUT: 1 DATA_REG 1 ACC: 0 	dec 
+  INFO    machine:tick          TICK: 334 PC:  84 ADDR: 512 MEM_OUT: 1 DATA_REG 1 ACC: 0 	st 512
+  INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'st', 'arg': 512, 'addressingType': 0}
+  INFO    machine:tick          TICK: 335 PC:  84 ADDR: 512 MEM_OUT: 1 DATA_REG 1 ACC: 0 	st 512
+  INFO    machine:tick          TICK: 336 PC:  84 ADDR: 512 MEM_OUT: 1 DATA_REG 1 ACC: 0 	st 512
+  DEBUG   machine:latch_memory  latch_memory: 512 : 0
+  INFO    machine:tick          TICK: 337 PC:  84 ADDR: 512 MEM_OUT: 0 DATA_REG 1 ACC: 0 	st 512
+  INFO    machine:tick          TICK: 338 PC:  85 ADDR: 512 MEM_OUT: 0 DATA_REG 1 ACC: 0 	bnz 77
   INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'bnz', 'arg': 77, 'addressingType': 0}
-  INFO    machine:tick          TICK: 339 PC:  85 ADDR: 513 MEM_OUT: 0 DATA_REG 1 ACC: 0 	bnz 77
-  INFO    machine:tick          TICK: 340 PC:  85 ADDR: 513 MEM_OUT: 0 DATA_REG 1 ACC: 0 	bnz 77
-  INFO    machine:tick          TICK: 341 PC:  86 ADDR: 513 MEM_OUT: 0 DATA_REG 1 ACC: 0 	jmp 100
+  INFO    machine:tick          TICK: 339 PC:  85 ADDR: 512 MEM_OUT: 0 DATA_REG 1 ACC: 0 	bnz 77
+  INFO    machine:tick          TICK: 340 PC:  85 ADDR: 512 MEM_OUT: 0 DATA_REG 1 ACC: 0 	bnz 77
+  INFO    machine:tick          TICK: 341 PC:  86 ADDR: 512 MEM_OUT: 0 DATA_REG 1 ACC: 0 	jmp 100
   INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'jmp', 'arg': 100, 'addressingType': 0}
-  INFO    machine:tick          TICK: 342 PC:  86 ADDR: 513 MEM_OUT: 0 DATA_REG 1 ACC: 0 	jmp 100
-  INFO    machine:tick          TICK: 343 PC:  86 ADDR: 513 MEM_OUT: 0 DATA_REG 1 ACC: 0 	jmp 100
-  INFO    machine:tick          TICK: 344 PC: 100 ADDR: 513 MEM_OUT: 0 DATA_REG 1 ACC: 0 	hlt 
+  INFO    machine:tick          TICK: 342 PC:  86 ADDR: 512 MEM_OUT: 0 DATA_REG 1 ACC: 0 	jmp 100
+  INFO    machine:tick          TICK: 343 PC:  86 ADDR: 512 MEM_OUT: 0 DATA_REG 1 ACC: 0 	jmp 100
+  INFO    machine:tick          TICK: 344 PC: 100 ADDR: 512 MEM_OUT: 0 DATA_REG 1 ACC: 0 	hlt 
   INFO    machine:decode_and_execute_instruction instruction: {'opcode': 'hlt', 'arg': '', 'addressingType': 0}
-  INFO    machine:tick          TICK: 345 PC: 100 ADDR: 513 MEM_OUT: 0 DATA_REG 1 ACC: 0 	hlt 
+  INFO    machine:tick          TICK: 345 PC: 100 ADDR: 512 MEM_OUT: 0 DATA_REG 1 ACC: 0 	hlt 
   INFO    machine:simulation    output_buffer: 'FT'
 out_stdout: |
   loaded 9 into 0
@@ -483,13 +483,13 @@ out_stdout: |
   8  :  ld 4
   9  :  jmp 11
   10  :  ld 7
-  11  :  st 513
-  12  :  ld 513*
+  11  :  st 512
+  12  :  ld 512*
   13  :  st 511
-  14  :  ld 513
+  14  :  ld 512
   15  :  inc 
-  16  :  st 513
-  17  :  ld 513*
+  16  :  st 512
+  17  :  ld 512*
   18  :  out 
   19  :  ld 511
   20  :  dec 
@@ -546,31 +546,31 @@ out_stdout: |
   71  :  inc 
   72  :  bz 87
   73  :  ld 15
-  74  :  st 515
+  74  :  st 513
   75  :  ld 15*
-  76  :  st 513
-  77  :  ld 515
+  76  :  st 512
+  77  :  ld 513
   78  :  inc 
-  79  :  st 515
-  80  :  ld 515*
+  79  :  st 513
+  80  :  ld 513*
   81  :  out 
-  82  :  ld 513
+  82  :  ld 512
   83  :  dec 
-  84  :  st 513
+  84  :  st 512
   85  :  bnz 77
   86  :  jmp 100
   87  :  ld 18
-  88  :  st 517
+  88  :  st 514
   89  :  ld 18*
-  90  :  st 515
-  91  :  ld 517
+  90  :  st 513
+  91  :  ld 514
   92  :  inc 
-  93  :  st 517
-  94  :  ld 517*
+  93  :  st 514
+  94  :  ld 514*
   95  :  out 
-  96  :  ld 515
+  96  :  ld 513
   97  :  dec 
-  98  :  st 515
+  98  :  st 513
   99  :  bnz 91
   100  :  hlt 
   ============================================================
@@ -585,10 +585,10 @@ out_code: '[{"256": 256, "0": 9, "1": 10, "2": 1, "3": 84, "4": 2, "5": 1, "6": 
   "inc", "arg": "", "addressingType": 0}, {"opcode": "bz", "arg": 10, "addressingType":
   0}, {"opcode": "ld", "arg": 4, "addressingType": 0}, {"opcode": "jmp", "arg": 11,
   "addressingType": 0}, {"opcode": "ld", "arg": 7, "addressingType": 0}, {"opcode":
-  "st", "arg": 513, "addressingType": 0}, {"opcode": "ld", "arg": 513, "addressingType":
-  1}, {"opcode": "st", "arg": 511, "addressingType": 0}, {"opcode": "ld", "arg": 513,
+  "st", "arg": 512, "addressingType": 0}, {"opcode": "ld", "arg": 512, "addressingType":
+  1}, {"opcode": "st", "arg": 511, "addressingType": 0}, {"opcode": "ld", "arg": 512,
   "addressingType": 0}, {"opcode": "inc", "arg": "", "addressingType": 0}, {"opcode":
-  "st", "arg": 513, "addressingType": 0}, {"opcode": "ld", "arg": 513, "addressingType":
+  "st", "arg": 512, "addressingType": 0}, {"opcode": "ld", "arg": 512, "addressingType":
   1}, {"opcode": "out", "arg": "", "addressingType": 0}, {"opcode": "ld", "arg": 511,
   "addressingType": 0}, {"opcode": "dec", "arg": "", "addressingType": 0}, {"opcode":
   "st", "arg": 511, "addressingType": 0}, {"opcode": "bnz", "arg": 14, "addressingType":
@@ -622,20 +622,20 @@ out_code: '[{"256": 256, "0": 9, "1": 10, "2": 1, "3": 84, "4": 2, "5": 1, "6": 
   0}, {"opcode": "cla", "arg": "", "addressingType": 0}, {"opcode": "bz", "arg": 72,
   "addressingType": 0}, {"opcode": "cla", "arg": "", "addressingType": 0}, {"opcode":
   "inc", "arg": "", "addressingType": 0}, {"opcode": "bz", "arg": 87, "addressingType":
-  0}, {"opcode": "ld", "arg": 15, "addressingType": 0}, {"opcode": "st", "arg": 515,
+  0}, {"opcode": "ld", "arg": 15, "addressingType": 0}, {"opcode": "st", "arg": 513,
   "addressingType": 0}, {"opcode": "ld", "arg": 15, "addressingType": 1}, {"opcode":
-  "st", "arg": 513, "addressingType": 0}, {"opcode": "ld", "arg": 515, "addressingType":
-  0}, {"opcode": "inc", "arg": "", "addressingType": 0}, {"opcode": "st", "arg": 515,
-  "addressingType": 0}, {"opcode": "ld", "arg": 515, "addressingType": 1}, {"opcode":
-  "out", "arg": "", "addressingType": 0}, {"opcode": "ld", "arg": 513, "addressingType":
-  0}, {"opcode": "dec", "arg": "", "addressingType": 0}, {"opcode": "st", "arg": 513,
+  "st", "arg": 512, "addressingType": 0}, {"opcode": "ld", "arg": 513, "addressingType":
+  0}, {"opcode": "inc", "arg": "", "addressingType": 0}, {"opcode": "st", "arg": 513,
+  "addressingType": 0}, {"opcode": "ld", "arg": 513, "addressingType": 1}, {"opcode":
+  "out", "arg": "", "addressingType": 0}, {"opcode": "ld", "arg": 512, "addressingType":
+  0}, {"opcode": "dec", "arg": "", "addressingType": 0}, {"opcode": "st", "arg": 512,
   "addressingType": 0}, {"opcode": "bnz", "arg": 77, "addressingType": 0}, {"opcode":
   "jmp", "arg": 100, "addressingType": 0}, {"opcode": "ld", "arg": 18, "addressingType":
-  0}, {"opcode": "st", "arg": 517, "addressingType": 0}, {"opcode": "ld", "arg": 18,
-  "addressingType": 1}, {"opcode": "st", "arg": 515, "addressingType": 0}, {"opcode":
-  "ld", "arg": 517, "addressingType": 0}, {"opcode": "inc", "arg": "", "addressingType":
-  0}, {"opcode": "st", "arg": 517, "addressingType": 0}, {"opcode": "ld", "arg": 517,
+  0}, {"opcode": "st", "arg": 514, "addressingType": 0}, {"opcode": "ld", "arg": 18,
+  "addressingType": 1}, {"opcode": "st", "arg": 513, "addressingType": 0}, {"opcode":
+  "ld", "arg": 514, "addressingType": 0}, {"opcode": "inc", "arg": "", "addressingType":
+  0}, {"opcode": "st", "arg": 514, "addressingType": 0}, {"opcode": "ld", "arg": 514,
   "addressingType": 1}, {"opcode": "out", "arg": "", "addressingType": 0}, {"opcode":
-  "ld", "arg": 515, "addressingType": 0}, {"opcode": "dec", "arg": "", "addressingType":
-  0}, {"opcode": "st", "arg": 515, "addressingType": 0}, {"opcode": "bnz", "arg":
+  "ld", "arg": 513, "addressingType": 0}, {"opcode": "dec", "arg": "", "addressingType":
+  0}, {"opcode": "st", "arg": 513, "addressingType": 0}, {"opcode": "bnz", "arg":
   91, "addressingType": 0}, {"opcode": "hlt", "arg": "", "addressingType": 0}]'
