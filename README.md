@@ -3,7 +3,7 @@
 
 - Янковой Леонид P3232
 - Варинат `lisp -> asm | acc | harv | hw | tick -> instr | struct | stream | port | pstr | prob2 | cache`
-Без усложнения
+- Без усложнения
 
 ## Язык программирования Lisp
 ```
